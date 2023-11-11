@@ -1,0 +1,8 @@
+@model List<Araba>
+<div class ="container mb-3">
+    <main>
+        @foreach(var audi in Model){
+        @await Html.PartialAsync("_Detay",audi)
+        }
+    </main>
+</div>

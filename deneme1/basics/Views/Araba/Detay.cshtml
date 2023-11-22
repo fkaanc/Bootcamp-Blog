@@ -1,0 +1,14 @@
+@model List<Araba>
+    @if (!String.IsNullOrEmpty(ViewBag.SuccessMessage))
+{
+    <div class="alert alert-success">
+        @ViewBag.SuccessMessage
+    </div>
+}
+<div class ="container mt-5">
+    <main>
+        @foreach(var audi in Model){
+        @await Html.PartialAsync("_Detay",audi)
+        }
+    </main>
+</div>

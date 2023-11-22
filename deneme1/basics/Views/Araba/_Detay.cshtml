@@ -1,0 +1,23 @@
+<style>
+    .card a {
+      color: black;
+      text-decoration: none; /* Bu, bağlantı altını çizgisini kaldıracaktır */
+    }
+  </style>  
+  @model Araba
+  <div class="card mt-3" id="">
+      <div class="row">
+          <div class="col-md-3">
+              <img src="~/img/@Model.Image" alt="Detay Image" width="300" height="130">
+          </div>
+          <div class="col-md-9">
+              <div class="card-body">
+                  <a asp-controller="Araba" asp-action="Detay" asp-route-id="Model.Id">
+                      <h2 class="card-title">@Model.Title</h2>
+                  </a>
+                  <p class="card-text">@Model.Description</p>
+              </div>
+          </div>
+      </div>
+  </div>
+  
